@@ -40,7 +40,7 @@ export default function Header() {
         <div className="md:flex items-center justify-between dark:bg-zinc-900 bg-white py-4 md:px-10 lg:px-7 px-3">
           <div className="flex items-center">
             <Link href={'/'}>
-              <span className="cursor-pointer font-bold lg:text-4xl md:text-3xl text-2xl dark:text-white text-black">Blog</span>
+              <span className="cursor-pointer font-bold lg:text-4xl md:text-3xl text-2xl dark:text-white text-black">BLOG</span>
             </Link>
           </div>
           <div id="toggle" onClick={() => setActive(!active)}
@@ -68,7 +68,6 @@ export default function Header() {
                 </span>
               </Link>
             ))}
-
           </div>
         </div>
       </div>

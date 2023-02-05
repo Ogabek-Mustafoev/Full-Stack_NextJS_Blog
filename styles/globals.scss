@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", sans-serif;
+  &:before {
+    background-color: #ede7e7;
+    content: "";
+    content: "";
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: -1;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+html.dark {
+  body {
+    &::before {
+      background-color: rgb(39 39 42);
+    }
+  }
+}
+
+.text-shadow {
+  text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
+}
+
+.adjacent-post {
+  & .arrow-btn {
+    transition: width 300ms ease;
+    width: 50px;
+  }
+  &:hover {
+    & .arrow-btn {
+      width: 50px;
+    }
+  }
+}
+
+.react-multi-carousel-list {
+  & .arrow-btn {
+    transition: width 300ms ease;
+    width: 50px;
+    &:hover {
+      width: 60px;
+    }
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.react-multiple-carousel__arrow {
+  z-index: 49;
+  background: #000;
+  border: 1px solid white;
+}
+.react-multiple-carousel__arrow:hover {
+  border: 1px solid black;
+}
+.react-multi-carousel-dot--active button {
+  background: white;
+  border-color: #000;
+}
+
+.icon {
+  display: none;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  height: 30px;
+  width: 30px;
+}
+
+.icon .line {
+  height: 2.5px;
+  width: 25px;
+  position: absolute;
+  top: 8px;
+  left: 5px;
+  transition: transform 0.5s linear;
+}
+.icon .line0 {
+  top: 0;
+  bottom: 3px;
+}
+.icon .line2 {
+  top: auto;
+  bottom: 11px;
+}
+.icon.active .line1 {
+  transform: rotate(-765deg) translateY(5.5px);
+}
+.icon.active .line0 {
+  display: none;
+}
+.icon.active .line2 {
+  transform: rotate(765deg) translateY(-6.5px);
+}
+@media screen and (max-width: 769px) {
+  .icon {
+    display: block;
+  }
+}

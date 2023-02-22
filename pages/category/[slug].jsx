@@ -13,7 +13,7 @@ export default function Category({ posts }) {
     <div className="container mx-auto lg:px-10 md:px-2 px-1 mb-6">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span-1 lg:col-span-4">
-          <div className="relative lg:sticky top-8">
+          <div className="relative lg:sticky top-5 lg:top-20">
             <Categories />
           </div>
         </div>

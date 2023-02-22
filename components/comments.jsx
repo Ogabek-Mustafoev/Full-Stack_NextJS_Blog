@@ -5,7 +5,6 @@ import { getComments } from '../services';
 
 export default function Comments({ slug }) {
   const [comments, setComments] = useState([]);
-  console.log(comments);
 
   useEffect(() => {
     getComments(slug).then(res => setComments(res));

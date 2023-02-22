@@ -8,7 +8,6 @@ export default function CommentsForm({ slug }) {
   const [checked, setChecked] = useState(false);
 
   const getInputValues = e => {
-    console.log();
     setState(state => ({ ...state, [e.target.name]: e.target.value }));
   }
 
@@ -37,20 +36,13 @@ export default function CommentsForm({ slug }) {
     const email = localStorage.getItem('email');
     if (name || email) {
       setChecked(true)
+      setState(state => ({ ...state, name, email }));
     }
-    setState(state => ({ ...state, name, email }));
   }, []);
 
   return (
     <div className="bg-white dark:bg-zinc-900 dark:text-white text-black shadow-lg rounded-lg lg:p-8 p-4 pb-5 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b dark:border-blue-900 pb-4">Leave a comment</h3>
-      <div className="grid grid-cols-1 gap-4 pb-4">
-        <textarea
-          onChange={getInputValues}
-          value={state.comment} placeholder="Commets" name="comment"
-          className="p-4 resize-none outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 dark:bg-zinc-800 dark:focus:ring-zinc-700 bg-gray-100 text-gray-900 dark:text-gray-200"
-        />
-      </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 md:grid-cols-2 gap-4 pb-4">
         <input
           onChange={getInputValues}
@@ -61,6 +53,13 @@ export default function CommentsForm({ slug }) {
           onChange={getInputValues}
           type="email" value={state.email} placeholder="Email" name="email"
           className="p-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 dark:bg-zinc-800 dark:focus:ring-zinc-700 bg-gray-100 text-gray-900 dark:text-gray-200"
+        />
+      </div>
+      <div className="grid grid-cols-1 gap-4 pb-4">
+        <textarea
+          onChange={getInputValues}
+          value={state.comment} placeholder="Commets" name="comment"
+          className="p-4 resize-none outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 dark:bg-zinc-800 dark:focus:ring-zinc-700 bg-gray-100 text-gray-900 dark:text-gray-200"
         />
       </div>
       <div className="grid grid-cols-1 gap-4 pb-4">

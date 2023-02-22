@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import {
   Author, Categories, Comments, Loader,
-  CommentsForm, PostDetail, PostWidget,
+  CommentsForm, PostDetail, PostWidget, SinglePost,
 } from "../../components";
 import { getPostDetails, getPosts } from "../../services";
 
@@ -16,7 +16,7 @@ export default function PostDetails({ post }) {
     <div className="container mx-auto lg:px-10 md:px-2 px-1 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
         <div className="col-span lg:col-span-4">
-          <div className="relative lg:sticky top-8">
+          <div className="relative lg:sticky top-5 lg:top-20">
             <PostWidget
               slug={post.slug}
               categories={post.categories.map((category) => category.slug)}
@@ -29,6 +29,10 @@ export default function PostDetails({ post }) {
           <Author author={post.author} />
           <Comments slug={post.slug} />
           <CommentsForm slug={post.slug} />
+          <SinglePost
+            slug={post.slug}
+            categories={post.categories.map((category) => category.slug)}
+          />
         </div>
       </div>
     </div>

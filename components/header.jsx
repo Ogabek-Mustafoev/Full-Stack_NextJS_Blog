@@ -17,7 +17,6 @@ export default function Header() {
   }
 
   function switchTheme() {
-    console.log(1);
     setIsDarkMode(!isDarkMode)
     document.documentElement.classList.toggle('dark');
     if (document.documentElement.classList.contains('dark')) {

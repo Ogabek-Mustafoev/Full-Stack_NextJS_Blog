@@ -1,34 +1,38 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<h1 align="center" id="title">Blog-App</h1>
 
-## Getting Started
+<p id="description">Full-Stack Blog-App with <a href="https://nextjs.org/">Next JS</a>. <a href="https://hygraph.com/">GraphCMS</a> is used for backend. This project is fully responsive on different devices and window sizes. It also support dark/light theme. <a href="https://tailwindcss.com/">Tailwind CSS</a> is used for stylin. In this project you can see posts related IT-Sphere and also you can see important worldwide news. All data comes from GraphCMS.</p>
 
-First, run the development server:
+<h2>🚀 Demo</h2>
 
-```bash
-npm run dev
-# or
-yarn dev
+[🔗 Website link](https://full-stack-next-js-blog.vercel.app/)
+
+<h2>Project Screenshots:</h2>
+
+ <div style="display: flex; justify-content: space-between; width:100%;">
+  <img src="https://charming-semolina-34cdcd.netlify.app/assets/popular-post/m-blog-3.png" alt="project-screenshot" width="400">
+  <img src="https://charming-semolina-34cdcd.netlify.app/assets/popular-post/m-blog-4.png" alt="project-screenshot" width="400">
+ </div>
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. Download Pjoject</p>
+
+```
+git clone https://github.com/Ogabek-Mustafoev/Full-Stack_NextJS_Blog.git
 ```
 
+<p>2. Install packages</p>
+
+```
+npm install
+```
+
+<p>3. Run server:</p>
+
+```
+npm run dev
+```
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+<h2>💖Like my work?</h2>
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
